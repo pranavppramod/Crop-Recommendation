@@ -22,7 +22,7 @@ Apple, Banana, Blackgram, Chickpea, Coconut, Coffee, Cotton, Grapes, Jute, Kidne
 
 ## 📊 Dataset
 
-The dataset was downloaded from [Kaggle](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset/discussion/232252) It contains **2,200 samples** with seven numerical input features and one categorical target.
+The dataset was downloaded from [Kaggle](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset/discussion/232252). It contains **2,200 samples** with seven numerical input features and one categorical target.
 
 | Feature | Description |
 |---|---|
