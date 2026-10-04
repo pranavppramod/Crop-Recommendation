@@ -1,0 +1,142 @@
+{
+    "project": {
+        "name": "Crop Recommendation System",
+        "version": "1.0.0",
+        "description": "Machine learning system that recommends a suitable crop based on soil and environmental conditions."
+    },
+    "dataset": {
+        "file": "dataset/original.csv",
+        "rows": 2200,
+        "columns": 8,
+        "features": [
+            "N",
+            "P",
+            "K",
+            "temperature",
+            "humidity",
+            "ph",
+            "rainfall"
+        ],
+        "target": "label",
+        "num_classes": 22,
+        "classes": [
+            "apple",
+            "banana",
+            "blackgram",
+            "chickpea",
+            "coconut",
+            "coffee",
+            "cotton",
+            "grapes",
+            "jute",
+            "kidneybeans",
+            "lentil",
+            "maize",
+            "mango",
+            "mothbeans",
+            "mungbean",
+            "muskmelon",
+            "orange",
+            "papaya",
+            "pigeonpeas",
+            "pomegranate",
+            "rice",
+            "watermelon"
+        ]
+    },
+    "model": {
+        "file": "models/crop_recommendation_model.pkl",
+        "type": "RandomForestClassifier",
+        "algorithm": "Random Forest Classifier",
+        "parameters": {
+            "bootstrap": true,
+            "ccp_alpha": 0.0,
+            "class_weight": null,
+            "criterion": "gini",
+            "max_depth": null,
+            "max_features": "sqrt",
+            "max_leaf_nodes": null,
+            "max_samples": null,
+            "min_impurity_decrease": 0.0,
+            "min_samples_leaf": 1,
+            "min_samples_split": 5,
+            "min_weight_fraction_leaf": 0.0,
+            "monotonic_cst": null,
+            "n_estimators": 200,
+            "n_jobs": -1,
+            "oob_score": false,
+            "random_state": 42,
+            "verbose": 0,
+            "warm_start": false
+        },
+        "file_size_kb": 6482.85
+    },
+    "performance": {
+        "cv_accuracy": 0.9960227272727273,
+        "cv_std": 0.004953294254023494,
+        "test_accuracy": 0.9955,
+        "test_precision": 0.9957,
+        "test_recall": 0.9955,
+        "test_f1": 0.9955,
+        "test_samples": 440,
+        "test_correct": 438,
+        "test_incorrect": 2
+    },
+    "feature_ranges": {
+        "N": {
+            "min": 0.0,
+            "max": 140.0
+        },
+        "P": {
+            "min": 5.0,
+            "max": 145.0
+        },
+        "K": {
+            "min": 5.0,
+            "max": 205.0
+        },
+        "temperature": {
+            "min": 8.825674745,
+            "max": 43.67549305
+        },
+        "humidity": {
+            "min": 14.25803981,
+            "max": 99.98187601
+        },
+        "ph": {
+            "min": 3.504752314,
+            "max": 9.93509073
+        },
+        "rainfall": {
+            "min": 20.21126747,
+            "max": 298.5601175
+        }
+    },
+    "environment": {
+        "training_python": "3.13.15",
+        "deployment_python": "3.12.3",
+        "scikit_learn": "1.6.1",
+        "pandas": "2.2.3",
+        "numpy": "2.1.3",
+        "joblib": "1.6.0",
+        "shap_analysis": "0.52.0"
+    },
+    "analysis": {
+        "shap_used": true,
+        "shap_version": "0.52.0",
+        "shap_explainer_serialized": false
+    },
+    "deployment": {
+        "input_feature_order": [
+            "N",
+            "P",
+            "K",
+            "temperature",
+            "humidity",
+            "ph",
+            "rainfall"
+        ],
+        "prediction_output": "Recommended crop"
+    },
+    "generated_at": "2026-10-04T14:09:38.834166"
+}
